@@ -403,7 +403,7 @@ int main(int argc, char** argv){
   ros::init(argc, argv, "rviz_color_tracking");
   ros::NodeHandle nh;
   image_transport::ImageTransport it(nh);
-  pub = it.advertise("sensor_msgs/image", 1);
+  pub = it.advertise("sensor_msgs/Image", 1);
   sub = it.subscribe("camera/image", 1, imageCallback);
   ros::spin();
   return 0;
