@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>two_camera_depth_arm</name>
+  <name>ros_user_select_color_tracking</name>
   <version>0.0.0</version>
-  <description>The two_camera_depth_arm package</description>
+  <description>The ros_user_select_color_tracking package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
   <!-- Example:  -->

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(two_camera_depth_arm)
+project(ros_user_select_color_tracking)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -192,26 +192,26 @@ include_directories(
 
 add_executable(rviz_camera_test src/rviz_camera_test.cpp)
 target_link_libraries(rviz_camera_test ${catkin_LIBRARIES})
-add_dependencies(rviz_camera_test two_camera_depth_arm_generate_messages_cpp)
+add_dependencies(rviz_camera_test ros_user_select_color_tracking_generate_messages_cpp)
 
 add_executable(image_publisher src/image_publisher.cpp)
 target_link_libraries(image_publisher ${catkin_LIBRARIES})
-add_dependencies(image_publisher two_camera_depth_arm_generate_messages_cpp)
+add_dependencies(image_publisher ros_user_select_color_tracking_generate_messages_cpp)
 
 add_executable(rviz_color_tracking src/rviz_color_tracking.cpp)
 target_link_libraries(rviz_color_tracking ${catkin_LIBRARIES})
-add_dependencies(rviz_color_tracking two_camera_depth_arm_generate_messages_cpp)
+add_dependencies(rviz_color_tracking ros_user_select_color_tracking_generate_messages_cpp)
 
 add_executable(image_subscriber_color_tracking src/image_subscriber_color_tracking.cpp)
 target_link_libraries(image_subscriber_color_tracking ${catkin_LIBRARIES})
-add_dependencies(image_subscriber_color_tracking two_camera_depth_arm_generate_messages_cpp)
+add_dependencies(image_subscriber_color_tracking ros_user_select_color_tracking_generate_messages_cpp)
 
 add_executable(image_subscriber_cv src/image_subscriber_cv.cpp)
 target_link_libraries(image_subscriber_cv ${catkin_LIBRARIES})
-add_dependencies(image_subscriber_cv two_camera_depth_arm_generate_messages_cpp)
+add_dependencies(image_subscriber_cv ros_user_select_color_tracking_generate_messages_cpp)
 
 #stuff for OpenCV2
-find_package(OpenCV 2 REQUIRED)
+find_package(OpenCV 3 REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 target_link_libraries(rviz_camera_test ${OpenCV_LIBRARIES})
 target_link_libraries(image_publisher ${OpenCV_LIBRARIES})
